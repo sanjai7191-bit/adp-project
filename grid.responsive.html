@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <title>grid responsive</title>
+        <style>
+            .container{
+                 display:grid;
+                 grid-template-areas: 
+                 "header header"
+                 "nav nav"
+                 "aside main"
+                 "footer footer";
+                 height:100vh;
+
+            }
+            header{
+                grid-area: header;
+                background-color: rgb(32, 32, 108);
+                color: aliceblue;
+                text-align: center;
+            }
+            footer{
+                grid-area: footer;
+                background-color: rgb(43, 51, 112);
+                color: rgb(255, 255, 255);
+                text-align:center;
+            }
+            main{
+                grid-area: main;
+                background-color: rgb(179, 206, 201);
+                text-align:justify;
+                font-family: 'Times New Roman', Times, serif;
+                padding:10px;
+                color:black;
+            }
+            nav{
+                grid-area: nav;
+                color: black;
+                background-color: rgb(120, 73, 158);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            nav ul{
+            list-style-type:none;
+            display:flex;
+            justify-content: center;            
+        }
+
+        nav ul li{
+            margin:0 30px; 
+            /* float:left;           */
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+            font-weight:500;
+        }
+
+        aside{
+            grid-area:aside;
+            background-color:rgb(39, 1, 78);            
+        }
+
+        aside ul{
+            list-style-type:none;                    
+        }
+
+        aside ul li{
+            margin-bottom:20px;
+            color:white;
+            font-variant:small-caps;
+        }
+            
+
+            @media (max-width: 768px){
+
+            .container{
+                grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+           
+        nav ul{ 
+            flex-direction: column;
+            align-items: center;
+            }
+
+        nav ul li{
+            margin:10px 0;
+            }
+
+        aside ul{
+            text-align:center;
+            }
+
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h2>My Grid Responsive</h2>
+                <p>By mii</p>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="#">About mi</a> </li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">CHATBOX</a></li>
+                    <li><a href="#">help & Support</a></li>
+                </ul>
+            </nav>
+            <aside>
+                <ul>
+                    <li>cars</li>
+                    <li>bike</li>
+                    <li>lorry</li>
+                    <li>salvin</li>
+                </ul>
+           </aside>
+            <main>
+             
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic optio qui dolores id tempora, recusandae ratione explicabo veniam, sunt tempore odit nemo ipsa eum beatae! Adipisci totam illum fugiat.</p>
+            
+               <h2>Document Structure</h2>
+               <p>Define the overall structure of the HTML document.</p>
+               <h2>Text Content</h2>
+               <p>Create headings, paragraphs, and line breaks.</p>
+               <h2>Lists</h2>
+               <p>Create unordered (bulleted) and ordered (numbered) lists with list items.</p>
+               <h2>Semantic Layout</h2>
+               <p>Divide the page into meaningful sections or generic containers.</p>
+               <h2>Media</h2>
+               <p>Build forms for user input with various controls.</p>
+            </main>
+            <footer>
+                <p>All Rights Reserved|| My Webpage</p>
+            </footer>
+        </div>
+    </body>
+</html>
